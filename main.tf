@@ -1,21 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-        source = "hashicorp/aws"
-        version = "~> 4.16"
-    }
-  }
-}
-
-provider "aws" {
-    region = "us-west-2"
-    profile = "jack.roper"
-  
-}
-
-resource "aws_instance" "example_servder" {
-    ami = "ami-04e914639d0cca79a"
+resource "aws_instance" "example_server" {
+    ami = "ami-0fc5d935ebf8bc3bc"
     instance_type = "t2.micro"
+    subnet_id = var.subnet_id
+    associate_public_ip_address = true
   
     tags = {
       Name = "Teste EC2"
