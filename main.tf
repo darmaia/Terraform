@@ -17,3 +17,14 @@ resource "aws_instance" "example_server" {
       Name = "Teste EC2"
     }
 }
+
+resource "aws_db_instance" "example_db" {
+    identifier = "exemple_db"
+    instance_class = "db.t3.micro"
+    allocated_storage = 5
+    engine = "mariadb"
+    engine_version = "10.6.14"
+    username = "admin"
+    password = "123456"
+    publicly_accessible = true
+}
