@@ -18,7 +18,7 @@ resource "aws_instance" "example_server" {
     }
 }
 
-resource "aws_db_instance" "example_db" {
+resource "aws_db_instance" "default" {
     identifier = "exemple_db"
     instance_class = "db.t3.micro"
     allocated_storage = 5
