@@ -11,10 +11,6 @@ resource "aws_instance" "example_server" {
       device_name = "/dev/sda1"
       volume_size = 20
     }
-  
-    tags = {
-      Name = "Teste EC2"
-    }
 }
 
 resource "aws_db_instance" "default" {
