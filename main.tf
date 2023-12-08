@@ -24,6 +24,6 @@ resource "aws_db_instance" "default" {
     engine = "mariadb"
     engine_version = "10.6.14"
     username = "admin"
-    password = "Tecnol2023"
+    password = "${var.senhabd}"
     publicly_accessible = true
 }
